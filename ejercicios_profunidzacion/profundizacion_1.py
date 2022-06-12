@@ -25,11 +25,11 @@ entre inicio y fin
 inicio <= numero <= fin
 numero = random.randint(inicio, fin)
 
-NOTA: Esta función ya se utilizó en uno de los ejemplos de coase
+NOTA: Esta función ya se utilizó en uno de los ejemplos de clase
 Documentación oficial de random
 https://docs.python.org/3.7/library/random.html
 
-Realice una funcion llamada "lista_aleatoria" (fuera del blocke main)
+Realice una funcion llamada "lista_aleatoria" (fuera del block main)
 la cual reciba como parámetro el rango de aceptación de la lista
 "inicio y fin" y la cantidad de elementos que deseamos que
 contenga la lista, es decir, la cantidad de elementos random a generar.
@@ -49,6 +49,21 @@ Finalmente dicha función debe retornar la lista de elementos random generados.
 
 # --------------------------------
 # Aquí dentro definir la función lista_aleatoria
+def lista_aleatoria(inicial, final, agregados):
+    lista = []
+
+    for i in range(agregados + 2):
+        if i == 0:
+            elemento = lista.append(inicial)
+        
+        elif i > 0 and i < 6:
+            numero = random.randint(inicial, final)
+            elemento = lista.append(numero)
+
+        else:
+            elemento = lista.append(final)
+
+    return lista    
 
 
 # --------------------------------
@@ -63,10 +78,12 @@ if __name__ == '__main__':
     # Alumno: Luego de crear la función invocarla en este lugar:
 
     # mi_lista_aleatoria = lista_aleatoria(inicio, fin, cantidad)
+    mi_lista_aleatoria = lista_aleatoria(inicio, fin, cantidad)
 
     # Imprimir en pantalla "mi_lista_aleatoria" que tendrá
     # los valores retornado por la función lista_aleatoria:
-
+    
     # print(mi_lista_aleatoria)
+    print('Mi lista aleatoria es:', mi_lista_aleatoria)
 
     print("terminamos")
