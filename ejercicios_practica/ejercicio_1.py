@@ -14,6 +14,20 @@ def imprimir_mayor(numero_1, numero_2):
     # En esta función debe determinar cual de los dos
     # números ingresados por parámetro es mayor
     # y luego imprimir dicho valor en pantalla
+    if numero_1 != numero_2:
+        mayor = max(numero_1, numero_2)
+        print('El número mayor es:', mayor)
+
+        '''
+        Me tomé la libertad de hacer un agregado que va más allá de la consigna.
+        Considerando que la función podría aplicarse para comparar dos números
+        ingresados por consola, tuve en cuenta la posibilidad de que esos dos
+        números fuesen iguales.
+        Por eso el if.
+        '''
+    
+    else:
+        print('Los números comparados son iguales.')
 
 
 if __name__ == '__main__':
@@ -23,3 +37,4 @@ if __name__ == '__main__':
     imprimir_mayor(2, 10)
 
     print("terminamos")
+    
